@@ -6,204 +6,64 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="container">
-        <div class="first" id="first-Div" onclick="clickAll()">
-            <img class="photo" src="./assets/veg.png">
-            <p class="para">All</p>
+    <header>
+        <div class="head">
+            <img src="./assets/primary-logo.svg" height="100px" width="140px" style="margin-left:100px;margin-top: 10px;">
+            <p class="deliver"><b>Delivery in <span class="red">9 Mins</span><b></p>
+            <input class="in" type="text" placeholder="Search for">
+            <i class="fa fa-circle-user fa-2x" onclick="popUp()"><br><p class="l">Login</p></i>
+            <i class="fa fa-cart-shopping fa-2x"><br><p class="l">Cart</p></i>
         </div>
-        <div class="first" onclick="FreshVegetables()">
-            <img  class="photo" src="./assets/freshVeg.png">
-            <p class="para">Fresh <br> Vegetables</p>
+    </header>
+    
+    <div class="aside-content">
+        <div class="container">
+            <div class="first" id="first-Div" onclick="allClick()">
+                <img class="photo" src="./assets/veg.png">
+                <p class="para">All</p>
+            </div>
+            <div class="first" onclick="freshVegetables()">
+                <img  class="photo" src="./assets/freshVeg.png">
+                <p class="para">Fresh <br> Vegetables</p>
+            </div>
+            <div class="first">
+                <img  class="photo"  src="./assets/fruits.png">
+                <p class="para">Fresh Fruits</p>
+            </div>
+            <div class="first">
+                <img  class="photo"  src="./assets/flower.png">
+                <p class="para">Flowers &<br>Leaves</p>
+            </div>
+            <div class="first">
+                <img  class="photo"  src="./assets/grapes.png">
+                <p class="para">Seasonal Pick</p>
+            </div>
+            <div class="first">
+                <img  class="photo"  src="./assets/leafy.png">
+                <p class="para">Leafy,Herbs &<br>Seasonings</p>
+            </div>
+            <div class="first">
+                <img  class="photo"  src="./assets/exotic.png">
+                <p class="para">Exotics &<br>Premium</p>
+            </div>
+            <div class="first side">
+                <img  class="photo"  src="./assets/organic.png">
+                <p class="para">Organics &<br>Hydroponics</p>
+            </div>
         </div>
-        <div class="first">
-            <img  class="photo"  src="./assets/fruits.png">
-            <p class="para">Fresh Fruits</p>
+        <div class="content-section" id="content-visible">
+            <!-- all items are printed  -->
         </div>
-        <div class="first">
-            <img  class="photo"  src="./assets/flower.png">
-            <p class="para">Flowers &<br>Leaves</p>
-        </div>
-        <div class="first">
-            <img  class="photo"  src="./assets/grapes.png">
-            <p class="para">Seasonal Pick</p>
-        </div>
-        <div class="first">
-            <img  class="photo"  src="./assets/leafy.png">
-            <p class="para">Leafy,Herbs &<br>Seasonings</p>
-        </div>
-        <div class="first">
-            <img  class="photo"  src="./assets/exotic.png">
-            <p class="para">Exotics &<br>Premium</p>
-        </div>
-        <div class="first side">
-            <img  class="photo"  src="./assets/organic.png">
-            <p class="para">Organics &<br>Hydroponics</p>
-        </div>
-    </div>
-    <div class="content-section" id="content-visible">
-        <p class="fresh">Fresh Fruits and Vegetables</p>
-        <div class="inside-content">
-            <div class="all">
-                <div class="inside-image">
-                    <img class="mg" src="./inside assets/coriander.jpeg" height="290px" width="290px" style="border-radius: 25px;margin-top: 10px;">
-                    <img src="./assets/offer-tag.svg" height="60px" width="70px" style="position: absolute;top:10px;left: -6px;border-top-left-radius: 30px;">
-                    <p class="offer">37% <br> Off</p>
-                </div>
-                <p class="con">Celery</p>
-                <p class="con">200 g</p>
-                <p class="con"><b>₹52</b><span>₹83</span></p>
-                <p class="button">Add to Cart</p>
-            </div>
-            <div class="all">
-                <div class="inside-image">
-                    <img class="mg"  src="./vegis/drumstick.jpeg" height="290px" width="290px" style="border-radius: 25px; margin-top: 10px;">
-                    <img src="./assets/offer-tag.svg" height="60px" width="70px" style="position: absolute;top:10px;left: -6px;border-top-left-radius: 30px;">
-                    <p class="offer">21% <br> Off</p>
-                </div>
-                <p class="con">Drumstick</p>
-                <p class="con">200 g</p>
-                <p class="con"><b>₹30</b><span>₹45</span></p>
-                <p class="button">Add to Cart</p>
-            </div>
-            <div class="all">
-                <div class="inside-image">
-                    <img class="mg"  src="./vegis/mirchi.jpeg" height="290px" width="290px" style="border-radius: 25px; margin-top: 10px;">
-                    <img src="./assets/offer-tag.svg" height="60px" width="70px" style="position: absolute;top:10px;left: -6px;border-top-left-radius: 30px;">
-                    <p class="offer">6% <br> Off</p>
-                </div>
-                <p class="con">Mirchi</p>
-                <p class="con">200 g</p>
-                <p class="con"><b>₹32</b><span>₹38</span></p>
-                <p class="button">Add to Cart</p>
-            </div>
-            <div class="all">
-                <div class="inside-image">
-                    <img class="mg"  src="./vegis/lemons.jpeg" height="290px" width="290px" style="border-radius: 25px; margin-top: 10px;">
-                    <img src="./assets/offer-tag.svg" height="60px" width="70px" style="position: absolute;top:10px;left: -6px;border-top-left-radius: 30px;">
-                    <p class="offer">4% <br> Off</p>
-                </div>
-                <p class="con">Lemons</p>
-                <p class="con">200 g</p>
-                <p class="con"><b>₹50</b><span>₹65</span></p>
-                <p class="button">Add to Cart</p>
-            </div>
-            <div class="all">
-                <div class="inside-image">
-                    <img class="mg"  src="./vegis/onions.jpeg" height="290px" width="290px" style="border-radius: 25px; margin-top: 10px;">
-                    <img src="./assets/offer-tag.svg" height="60px" width="70px" style="position: absolute;top:10px;left: -6px;border-top-left-radius: 30px;">
-                    <p class="offer">30% <br> Off</p>
-                </div>
-                <p class="con">Onions</p>
-                <p class="con">1 Kg</p>
-                <p class="con"><b>₹30</b><span>₹39</span></p>
-                <p class="button">Add to Cart</p>
-            </div>
-            <div class="all">
-                <div class="inside-image">
-                    <img class="mg"  src="./vegis/tomatoes.jpeg" height="290px" width="290px" style="border-radius: 25px; margin-top: 10px;">
-                    <img src="./assets/offer-tag.svg" height="60px" width="70px" style="position: absolute;top:10px;left: -6px;border-top-left-radius: 30px;">
-                    <p class="offer">54% <br> Off</p>
-                </div>
-                <p class="con">Tomatoes</p>
-                <p class="con">1 Kg</p>
-                <p class="con"><b>₹35</b><span>₹50</span></p>
-                <p class="button">Add to Cart</p>
-            </div>
-            <div class="all">
-                <div class="inside-image">
-                    <img class="mg"  src="./vegis/loose garlic.jpeg" height="290px" width="290px" style="border-radius: 25px; margin-top: 10px;">
-                    <img src="./assets/offer-tag.svg" height="60px" width="70px" style="position: absolute;top:10px;left: -6px;border-top-left-radius: 30px;">
-                    <p class="offer">53% <br> Off</p>
-                </div>
-                <p class="con">Loose garlic</p>
-                <p class="con">200 g</p>
-                <p class="con"><b>₹45</b><span>₹55</span></p>
-                <p class="button">Add to Cart</p>
-            </div>
-            <div class="all">
-                <div class="inside-image">
-                    <img class="mg"  src="./vegis/capsi.jpeg" height="290px" width="290px" style="border-radius: 25px; margin-top: 10px;">
-                    <img src="./assets/offer-tag.svg" height="60px" width="70px" style="position: absolute;top:10px;left: -6px;border-top-left-radius: 30px;">
-                    <p class="offer">12% <br> Off</p>
-                </div>
-                <p class="con">Capsicum</p>
-                <p class="con">500 g</p>
-                <p class="con"><b>₹40</b><span>₹47</span></p>
-                <p class="button">Add to Cart</p>
-            </div>
-            <div class="all">
-                <div class="inside-image">
-                    <img class="mg"  src="./vegis/garlic.jpeg" height="290px" width="290px" style="border-radius: 25px; margin-top: 10px;">
-                    <img src="./assets/offer-tag.svg" height="60px" width="70px" style="position: absolute;top:10px;left: -6px;border-top-left-radius: 30px;">
-                    <p class="offer">37% <br> Off</p>
-                </div>
-                <p class="con">Garlic</p>
-                <p class="con">200 g</p>
-                <p class="con"><b>₹50</b><span>₹66</span></p>
-                <p class="button">Add to Cart</p>
-            </div>
-            <div class="all">
-                <div class="inside-image">
-                    <img class="mg"  src="./vegis/unknow.jpeg" height="290px" width="290px" style="border-radius: 25px; margin-top: 10px;">
-                    <img src="./assets/offer-tag.svg" height="60px" width="70px" style="position: absolute;top:10px;left: -6px;border-top-left-radius: 30px;">
-                    <p class="offer">31% <br> Off</p>
-                </div>
-                <p class="con">Celery</p>
-                <p class="con">200 g</p>
-                <p class="con"><b>₹52</b><span>₹60</span></p>
-                <p class="button">Add to Cart</p>
-            </div>
-            <div class="all">
-                <div class="inside-image">
-                    <img class="mg"  src="./inside assets/coriander.jpeg" height="290px" width="290px" style="border-radius: 25px; margin-top: 10px;">
-                    <img src="./assets/offer-tag.svg" height="60px" width="70px" style="position: absolute;top:10px;left: -6px;border-top-left-radius: 30px;">
-                    <p class="offer">48% <br> Off</p>
-                </div>
-                <p class="con">Coriander</p>
-                <p class="con">200 g</p>
-                <p class="con"><b>₹52</b><span>₹65</span></p>
-                <p class="button">Add to Cart</p>
-            </div>
+        <div class="float" id="floatContent">
+            <input class="mobile-no" type="number" placeholder="Enter Phone Number">
+            <div class="continue">Continue</div>
         </div>
     </div>
     <div class="content-section1" id="content-visible1">
-        <p class="fresh">Fresh Fruits and Vegetables</p>
-        <div class="inside-content">
-            <div class="all">
-                <div class="inside-image">
-                    <img class="mg"  src="./vegis/apples.jpeg" height="290px" width="290px" style="border-radius: 25px;margin-top: 10px;">
-                    <img src="./assets/offer-tag.svg" height="60px" width="70px" style="position: absolute;top:10px;left: -6px;border-top-left-radius: 30px;">
-                    <p class="offer">25% <br> Off</p>
-                </div>
-                <p class="con">Apples</p>
-                <p class="con">1 Kg</p>
-                <p class="con"><b>₹230</b><span>₹280</span></p>
-                <p class="button">Add to Cart</p>
-            </div>
-            <div class="all">
-                <div class="inside-image">
-                    <img class="mg"  src="./vegis/canberries.jpg" height="290px" width="290px" style="border-radius: 25px; margin-top: 10px;">
-                    <img src="./assets/offer-tag.svg" height="60px" width="70px" style="position: absolute;top:10px;left: -6px;border-top-left-radius: 30px;">
-                    <p class="offer">33% <br> Off</p>
-                </div>
-                <p class="con">Canberries</p>
-                <p class="con">200 g</p>
-                <p class="con"><b>₹83</b><span>₹90</span></p>
-                <p class="button">Add to Cart</p>
-            </div>
-            <div class="all">
-                <div class="inside-image">
-                    <img class="mg"  src="./vegis/guva.jpeg" height="290px" width="290px" style="border-radius: 25px; margin-top: 10px;">
-                    <img src="./assets/offer-tag.svg" height="60px" width="70px" style="position: absolute;top:10px;left: -6px;border-top-left-radius: 30px;">
-                    <p class="offer">23% <br> Off</p>
-                </div>
-                <p class="con">Guva</p>
-                <p class="con">1 Kg</p>
-                <p class="con"><b>₹120</b><span>₹134</span></p>
-                <p class="button">Add to Cart</p>
-            </div>
+            <!-- fruits are printed  -->
     </div>
 </body>
 </html>
